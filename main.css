@@ -1,3 +1,141 @@
+/*==================== VARIABLES CSS ====================*/
+:root {
+  --header-height: 3rem;
+
+  /*========== Colors ==========*/
+  --hue-color:0; 
+
+  
+  --principalText-color: hsl(0, 0%, 100%); /*#fff*/
+  --body-color: hsl(0, 0%, 2%); /*#040404*/
+  --container-color: hsl(0, 2%, 10%); /*#1A1919*/
+  --container-color-light: hsl(0, 1%, 23%); /*#ffffff 0.15%*/
+  
+  --h2title-color: hsl(0, 0%, 67%); /*#aaaaaa*/
+  --green-color: hsl(148, 79%, 46%); /*#19d26f*/
+  --secondGreen-color: hsl(148, 80%, 61%); /*#4ceb95*/
+
+  --scroll-bar-color: var(--container-color);
+  --scroll-thumb-color: var(--h2title-color);
+  
+  /*========== Images bacground ==========*/
+  --image-bg: url("../img/bg2.png");
+  --image-bgC: url("../img/test.png");
+
+  /*========== Font and typography ==========*/
+  /*--body-font: 'Nunito', sans-serif;*/
+  --body-font: 'Open Sans', sans-serif;
+  /*--body-font: 'Work Sans', sans-serif;*/  
+
+    /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+    --big-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: 0.75rem;
+
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+    /*========== Margenes Bottom ==========*/
+    /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
+    --mb-0-25: 0.25rem;
+    --mb-0-5: 0.5rem;
+    --mb-0-75: 0.75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+}
+
+/* Font size for large devices */
+@media screen and (min-width: 968px) {
+    :root {
+        --big-font-size: 3rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 2.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: 0.875rem;
+        --smaller-font-size: .813rem;
+    }
+}
+
+/*========== Variables Dark theme ==========*/
+body.light-theme{
+  /* HSL color mode */
+
+  --green-color:hsl(124, 41%, 32%);
+  --body-color: hsl(64, 22%, 75%); /*fff*/
+  --container-color: hsl(64, 7%, 62%);
+  --principalText-color: hsl(0, 2%, 10%); 
+  --h2title-color: #3E4345;
+  --secondGreen-color: #1B401D;
+  /*--principalText-color: hsl(0, 0%, 100%);*/
+  --image-bg: url("../img/bgC.png");
+  --image-bgC: url("../img/testC.png");
+  --scroll-bar-color: var(--container-color);
+  --scroll-thumb-color: var(--green-color);
+
+}
+
+/*========== Button Dark/Light ==========*/
+.change-theme{
+  right: 15px;
+  position: fixed;
+  display: none;
+  z-index: 99999;
+}
+
+.change-theme i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  background: var(--green-color);
+  color: var(--principalText-color);
+  transition: all 0.4s;
+}
+
+.change-theme i:hover{
+  background: var(--body-color);
+  color: var(--principalText-color);
+}
+
+
+@media screen and (max-width:  568px){
+  .change-theme {
+    top: 15px;
+  }
+}
+
+@media (min-width: 569px) and (max-width: 1023px){
+  .change-theme {
+    top: 75px;
+  }
+}
+
+/* For large devices*/
+@media  screen and (min-width: 992px){
+  .change-theme {
+    top: 95px;
+  }
+  .change-theme i {
+    background: var(--body-color);
+  }
+}
+
 :root {
   --primary: #FFCE00;
   --secondary: #FE4880;
@@ -17,9 +155,9 @@ body {
 }
 
 .card {
-  margin: auto auto 0;
-  width: 400px;
-  height: 600px;
+  margin: 4% auto;
+  width: 90vw;
+  height: 95vh;
   perspective: 1000px;
 }
 
@@ -49,7 +187,7 @@ body {
 }
 
 .card__face--front {
-  background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));
+  background-image: linear-gradient(to bottom right, var(--body-color), var(--green-color));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -83,7 +221,8 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: linear-gradient(to bottom left, var(--primary) 10%, var(--secondary) 115%);
+  background-image: linear-gradient(to bottom left, var(--body-color) 10%, var(--green-color) 115%);
+
   z-index: -1;
   border-radius: 0px 0px 50% 0px;
 }
@@ -93,7 +232,7 @@ body {
   width: 128px;
   height: 128px;
   margin: 0 auto 30px;
-  border-radius: 50%;
+  border-radius: 5% 25%;
   background-color: #FFF;
   border: 5px solid #FFF;
   object-fit: cover;
