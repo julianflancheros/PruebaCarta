@@ -90,9 +90,9 @@ body.light-theme{
 
 /*========== Button Dark/Light ==========*/
 .change-theme{
+  position: absolute;
   right: 15px;
-  position: fixed;
-  display: none;
+  top: 15px;
   z-index: 99999;
 }
 
@@ -114,7 +114,7 @@ body.light-theme{
 }
 
 
-@media screen and (max-width:  568px){
+/* @media screen and (max-width:  568px){
   .change-theme {
     top: 15px;
   }
@@ -124,17 +124,19 @@ body.light-theme{
   .change-theme {
     top: 75px;
   }
-}
+} */
 
 /* For large devices*/
-@media  screen and (min-width: 992px){
+/* @media  screen and (min-width: 992px){
   .change-theme {
     top: 95px;
   }
   .change-theme i {
     background: var(--body-color);
   }
-}
+} */
+
+/*****************************/
 
 :root {
   --primary: #FFCE00;
@@ -149,9 +151,36 @@ body.light-theme{
 }
 
 body {
-  font-family: montserrat, sans-serif;
+  font-family: var(--body-font);
+  color: var(--principalText-color);
+  font-size: var(--normal-font-size);
+  /* background-color: #000; */
   width: 100%;
   min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  background: var(--body-color) var(--image-bg) top right no-repeat;
+  background-size: cover;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  z-index: -1;
+}
+
+@media screen and (min-width: 1024px) {
+  body::before {
+    background-attachment: fixed;
+  }
+} 
+
+@media screen and (max-width: 768px){
+  body::before {
+    background: var(--body-color) var(--image-bgC) center bottom no-repeat;
+  }
 }
 
 .card {
@@ -183,23 +212,38 @@ body {
   backface-visibility: hidden;
   overflow: hidden;
   border-radius: 16px;
-  box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2); */
+  /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
+  box-shadow: var(--container-color) 0px 1px 1px, var(--container-color) 0px 0px 1px 1px;
 }
 
 .card__face--front {
-  background-image: linear-gradient(to bottom right, var(--body-color), var(--green-color));
+  /* background-image: linear-gradient(to bottom right, var(--container-color), var(--green-color)); */
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
+  flex-direction: column;
 }
 
 .card__face--front h2 {
   color: #FFF;
-  font-size: 32px;
+  font-size: 20vh;
+  margin: 0px 60px;
+  padding: 0;
+  line-height: 1;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+}
+
+.card__face--front h3 {
+  color: var(--green-color);
+  font-size: 9vh;
+  text-align: end;
+  margin: 0 34vw 0 0;
 }
 
 .card__face--back {
-  background-color: var(--light);
+  background-color: var(--h2title-color);
   transform: rotateY(180deg);
 }
 
@@ -209,8 +253,10 @@ body {
 }
 
 .card__header {
+  /* display: flex; */
+  padding: 15px;
   position: relative;
-  padding: 30px 30px 40px;
+  /* padding: 30px 30px 40px; */
 }
 
 .card__header:after {
@@ -221,17 +267,17 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: linear-gradient(to bottom left, var(--body-color) 10%, var(--green-color) 115%);
+  background-image: linear-gradient(to bottom left, var(--container-color) 10%, var(--green-color) 115%);
 
   z-index: -1;
-  border-radius: 0px 0px 50% 0px;
+  border-radius: 0px 0px 10% 10%;
 }
 
 .pp {
-  display: block;
+  /* display: block; */
+  /* margin: 0 auto 30px; */
   width: 128px;
   height: 128px;
-  margin: 0 auto 30px;
   border-radius: 5% 25%;
   background-color: #FFF;
   border: 5px solid #FFF;
@@ -240,10 +286,10 @@ body {
 
 .card__header h2 {
   color: #FFF;
-  font-size: 32px;
+  font-size: 5vh;
   font-weight: 900;
   text-transform: uppercase;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .card__body {
@@ -251,14 +297,43 @@ body {
 }
 
 .card__body h3 {
-  color: var(--dark);
+  color: var(--container-color);
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 15px;
 }
 
 .card__body p {
-  color: var(--dark);
+  color: var(--container-color);
   font-size: 18px;
   line-height: 1.4;
 }
+
+
+
+@media screen and (min-width: 1024px) {
+  body::before {
+    background-attachment: fixed;
+  }
+} 
+
+@media screen and (max-width: 768px){
+  .card__face--front {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  .card__face--front h2 {
+    font-size: 6vh;
+    margin-top: 15vh;
+  }
+  
+  .card__face--front h3 {
+    font-size: 4vh;
+    margin: 0;
+    text-align: center;
+  }
+}
+
