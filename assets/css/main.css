@@ -166,12 +166,12 @@ body.light-theme{
 
 /*****************************/
 
-:root {
+/* :root {
   --primary: #FFCE00;
   --secondary: #FE4880;
   --dark: #212121;
   --light: #F3F3F3;
-}
+} */
 
 * {
   margin: 0;
@@ -208,6 +208,14 @@ body::before {
 @media screen and (max-width: 768px){
   body::before {
     background: var(--body-color) var(--image-bgC) center bottom no-repeat;
+  }
+}
+@media (min-width: 768px) and (max-width: 950px){
+  .card__face--front h2 {
+    font-size: 15vh !important;
+  }
+  .card__face--front h3 {
+    font-size: 5vh !important;
   }
 }
 
@@ -445,6 +453,7 @@ body::before {
   .card__face--front h2 {
     font-size: 6vh;
     margin-top: 15vh;
+    text-align: center;
   }
   
   .card__face--front h3 {
