@@ -32,7 +32,7 @@ const textToChange = document.querySelectorAll("[data-section]")
 // console.log(textToChange)
 
 const changeLanguage = async (language) => {
-  const requestJson = await fetch(`../../archivosAnexos/${language}.json`);
+  const requestJson = await fetch(`https://julianflancheros.github.io/PruebaCarta/archivosAnexos/${language}.json`);
   const texts = await requestJson.json();
   // console.log(texts)
   for(const item of textToChange){
