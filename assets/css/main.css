@@ -114,6 +114,34 @@ body.light-theme{
 }
 
 
+/*========== Button Dark/Light ==========*/
+
+.change-language{
+  position: absolute;
+  right: 15px;
+  top: 75px;
+  z-index: 99999;
+  height: 40px;
+  width: 40px;
+}
+
+.change-language i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  background: var(--green-color);
+  color: var(--principalText-color);
+  transition: all 0.4s;
+}
+
+.change-language i:hover{
+  background: var(--body-color);
+  color: var(--principalText-color);
+}
+
 /* @media screen and (max-width:  568px){
   .change-theme {
     top: 15px;
@@ -251,6 +279,9 @@ body::before {
 .card__content {
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .card__header {
@@ -258,7 +289,7 @@ body::before {
   padding: 30px 15px 0 15px;
   position: relative;
   /* padding: 30px 30px 40px; */
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .card__header-presentation{
@@ -324,6 +355,8 @@ body::before {
   width: 40px;
   height: 40px;
   background: var(--green-color);
+  border: 5px solid var(--principalText-color);
+  border-radius: 5% 25%;
   color: var(--principalText-color);
   transition: all 0.4s;
   /* margin: 15px; */
@@ -349,10 +382,21 @@ body::before {
   /* margin-bottom: 15px; */
 }
 
-.card__body p {
+/* .card__body p {
   color: var(--container-color);
   font-size: 18px;
   line-height: 1.4;
+} */
+
+.card__body-data{
+  display: flex;
+  flex-direction: row;
+  column-gap: 35px;
+}
+
+.card__body-dataDescriptionParagrah{
+  color: var(--principalText-color);
+  transition: all 0.4s;
 }
 
 
@@ -369,6 +413,7 @@ body::before {
     flex-direction: column;
     align-content: center;
     align-items: center;
+    justify-content: space-around;
   }
   
   .card__header-contact{
@@ -386,7 +431,7 @@ body::before {
     row-gap: 3vw;
   }
 
-  .card__header-job{
+  .card__header-job, .card__body-dataDescriptionParagrah{
     display: none;
   }
 
@@ -467,3 +512,7 @@ body::before {
   text-decoration: none;
   text-align: center;
 }
+/* 
+.spanish{
+  background-image: url("../img/gb.svg");
+} */

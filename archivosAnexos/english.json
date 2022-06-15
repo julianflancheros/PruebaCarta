@@ -1,0 +1,26 @@
+{
+    "cardFront": {
+        "name": "Julian Lancheros",
+        "phase": "Choose only one master <br> Nature"
+    },
+    "cardJob": {
+        "Job": "Full Stack Developer"
+    },
+    "personalData":{
+        "mail": "julianfel_@hotmail.com",
+        "phone": "+57 321 916 7951",
+        "webPage": "julianflancheros.js.org",
+        "linkedin": "https://www.linkedin.com/in/julianflancheros"
+    },
+    "cardContact": {
+        "mail" : "Mail",
+        "phone": "Phone",
+        "website": "Web Site"
+    },
+    "cardDescription":{
+        "paragrah": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat aspernatur quae itaque debitis veniam consequuntur repudiandae sed temporibus. Deserunt nam illum odio quam quaerat ipsa"
+    },
+    "cardSaveContact": {
+        "saveContact": "Save Contact"
+    }
+}

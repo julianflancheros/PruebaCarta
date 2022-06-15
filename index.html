@@ -27,8 +27,8 @@
 	<div class="card">
 		<div class="card__inner">
 			<div class="card__face card__face--front">
-				<h2>Julian Lancheros</h2>
-				<h3>Choose only one master <br> Nature</h3>
+				<h2 data-section="cardFront" data-value="name">Julian Lancheros</h2>
+				<h3 data-section="cardFront" data-value="phase">Elige solo una maestra <br> la naturaleza</h3>
 				<!-- <h4>Full Stack Developer</h4> -->
 			</div>
 			<div class="card__face card__face--back">
@@ -36,10 +36,12 @@
 					<div class="card__header">
 						<div class="card__header-presentation">
 							<img src="assets/img/me.jpg" alt="" class="pp" />
-							<h2>Julian Lancheros</h2>
+							<h2
+							data-section="cardFront" data-value="name"
+							>Julian Lancheros</h2>
 						</div>
 						<div class="card__header-contact">
-							<h4 class="card__header-job">Full Stack Developer</h4>
+							<h4 class="card__header-job" data-section="cardJob" data-value="Job">Desarrollador Full Stack</h4>
 							<div class="card__header-socialIcons">
 								<a href="https://api.whatsapp.com/send?phone=573219167951" class="card__header-socialIcons-Icon">
 									<i class="icofont-brand-whatsapp"></i>
@@ -50,37 +52,51 @@
 								<a href="tel:+573219167951" class="card__header-socialIcons-Icon">
 									<i class="icofont-smart-phone"></i>
 								</a>
+								<a href="https://www.linkedin.com/in/julianflancheros" class="card__header-socialIcons-Icon">
+									<i class="icofont-linkedin"></i>
+								</a>
 							</div>
 						</div>
 					</div>
 
 					<div class="card__body">
 						<div class="card__body-data">
-							<div class="card__body-dataItem">
-								<i class="icofont-smart-phone"></i>
-								<div>
-									<h3>Celular</h3>
-									<p>+57 321 916 7951</p>
+							<div class="card__body-dataContact">
+								<div class="card__body-dataItem">
+									<i class="icofont-smart-phone"></i>
+									<div>
+										<h3 data-section="cardContact" data-value="phone">Celular</h3>
+										<p
+										data-section="personalData" data-value="phone"
+										>+57 321 916 7951</p>
+									</div>
+								</div>
+								<div class="card__body-dataItem">
+									<i class="icofont-email"></i>
+									<div>
+										<h3
+										data-section="cardContact" data-value="mail">Correo</h3>
+										<p data-section="personalData" data-value="mail">julianfel_@hotmail.com</p>
+									</div>
+								</div>
+								<div class="card__body-dataItem">
+									<i class="icofont-web"></i>
+									<div>
+										<h3
+										data-section="cardContact" data-value="website">Sitio Web</h3>
+										<p data-section="personalData" data-value="webPage">julianflancheros.js.org</p>
+									</div>
 								</div>
 							</div>
-							<div class="card__body-dataItem">
-								<i class="icofont-email"></i>
-								<div>
-									<h3>Correo</h3>
-									<p>julianfel_@hotmail.com</p>
-								</div>
-							</div>
-							<div class="card__body-dataItem">
-								<i class="icofont-web"></i>
-								<div>
-									<p>julianflancheros.js.org</p>
-								</div>
+							<div class="card__body-dataDescription">
+								<p class="card__body-dataDescriptionParagrah" 
+								data-section="cardDescription" data-value="paragrah">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat aspernatur quae itaque debitis veniam consequuntur repudiandae sed temporibus. Deserunt nam illum odio quam quaerat ipsa.</p>
 							</div>
 						</div>
 
 						<div class="card__body-buttons">
-							<a href="https://julianflancheros.github.io/PruebaCarta/archivosAnexos/JulianLancheros.vcf">Guardar contacto</a>
-							<a href="">Compartir contacto</a>
+							<a href="https://julianflancheros.github.io/PruebaCarta/archivosAnexos/JulianLancheros.vcf" data-section="cardSaveContact" data-value="saveContact">Guardar contacto</a>
+							<!-- <a href="">Compartir contacto</a> -->
 						</div>
 					</div>
 				</div>
@@ -91,6 +107,10 @@
 	<!-- Theme change button-->
 	<a href="#" class="change-theme">
 		<i class="icofont-sun-alt" id="theme-button"></i>
+	</a>
+	<a href="#" class="change-language">
+		<!-- <img src="assets/img/es.svg" alt="" id="language-button"> -->
+		<img alt="bandera idioma" id="language-button" src="./assets/img/es.svg">
 	</a>
 
 	<script src="assets/js/main.js"></script>
