@@ -118,8 +118,8 @@ body.light-theme{
 
 .change-language{
   position: absolute;
-  right: 15px;
-  top: 75px;
+  left: 15px;
+  top: 15px;
   z-index: 99999;
   height: 40px;
   width: 40px;
@@ -293,8 +293,8 @@ body::before {
 }
 
 .card__header {
-  display: flex;
-  padding: 30px 15px 0 15px;
+  /* display: flex; */
+  padding: 0 15px;
   position: relative;
   /* padding: 30px 30px 40px; */
   justify-content: space-evenly;
@@ -390,6 +390,14 @@ body::before {
   /* margin-bottom: 15px; */
 }
 
+.card__body-dataContact{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
 /* .card__body p {
   color: var(--container-color);
   font-size: 18px;
@@ -400,6 +408,12 @@ body::before {
   display: flex;
   flex-direction: row;
   column-gap: 35px;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.card__body-dataDescription{
+  padding: 0 30px;
 }
 
 .card__body-dataDescriptionParagrah{
@@ -466,12 +480,21 @@ body::before {
     display: flex;
     align-items: center;
   }
+
+  .card__body-dataContact{
+    flex-direction: column !important;
+  }
+
+  .card__body {
+    padding: 0;
+  }
 }
 
 .card__body-dataItem{
   display: flex;
   align-items: center;
   column-gap: 15px;
+  margin-left: 15px;
 }
 
 .card__body-dataItem h3, .card__body-dataItem p {
@@ -496,6 +519,7 @@ body::before {
   justify-content: center;
   flex-direction: column;
   column-gap: 15px;
+  padding: 0 30px;
 }
 
 .card__body-buttons a{
