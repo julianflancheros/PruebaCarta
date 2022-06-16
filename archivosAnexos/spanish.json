@@ -1,7 +1,7 @@
 {
     "cardFront": {
         "name": "Julian Lancheros",
-        "phase": "Elige solo una maestra <br>, la naturaleza"
+        "phase": "Elige solo una maestra,<br> la naturaleza"
     },
     "cardJob": {
         "Job": "Desarrollador Full Stack"
