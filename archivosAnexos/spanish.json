@@ -1,7 +1,7 @@
 {
     "cardFront": {
         "name": "Julian Lancheros",
-        "phase": "Elige solo una maestra <br> la naturaleza"
+        "phase": "Elige solo una maestra <br>, la naturaleza"
     },
     "cardJob": {
         "Job": "Desarrollador Full Stack"
@@ -10,7 +10,7 @@
         "mail": "julianfel_@hotmail.com",
         "phone": "+57 321 916 7951",
         "webPage": "julianflancheros.js.org",
-        "linkedin": "https://www.linkedin.com/in/julianflancheros"
+        "linkedin": "julianflancheros"
     },
     "cardContact": {
         "mail" : "Correo",
