@@ -1,0 +1,16 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Julian Lancheros
+N:Lancheros;Julian;;;
+EMAIL;TYPE=INTERNET;TYPE=WORK:julianfel_@hotmail.com
+EMAIL;TYPE=INTERNET:jflancherosm@unal.edu.co
+TEL;TYPE=WORK:321 9167951
+item1.TITLE:Full-stack Developer
+item1.X-ABLabel:
+item2.URL:http\://julianflancheros.js.org/
+item2.X-ABLabel:homePage
+URL;TYPE=WORK:http\://julianflancheros.js.org/
+PHOTO:https://lh3.googleusercontent.com/contacts/AKUYANTExylIeSiWFP84laTl9a
+ T7JJTV5Hi9DkQBt4hH14onS_2rV8mY
+CATEGORIES:myContacts
+END:VCARD
